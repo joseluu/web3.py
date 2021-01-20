@@ -8,8 +8,8 @@ from pathlib import (
 )
 import socket
 import sys
-import time
 import threading
+import time
 from types import (
     TracebackType,
 )
