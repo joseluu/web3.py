@@ -9,7 +9,6 @@ from pathlib import (
 import socket
 import sys
 import threading
-import time
 from types import (
     TracebackType,
 )
@@ -246,7 +245,6 @@ class IPCProvider(JSONBaseProvider):
                     try:
                         raw_response += sock.recv(4096)
                     except socket.timeout:
-                        time.sleep(timeout.seconds)
                         continue
                     if raw_response == b"":
                         timeout.sleep(0)
